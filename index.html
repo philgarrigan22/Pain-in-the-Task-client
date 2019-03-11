@@ -74,28 +74,61 @@
           </div>
 
           <div id="sign-in-box" class="col s6 content-section">
-            <form id="sign-in-form" "sign-up-form" class="inner-fields">
+            <form id="sign-in-form" class="inner-fields">
+              <div class="form-group">
               <label for="signIn">Sign-In</label>
               <div class="row">
                 <div class="input-field col s12">
-                  <input id="email" type="email" class="validate">
+                  <input name="credentials[email]" type="email" class="validate">
                   <label for="email">Email</label>
                 </div>
               </div>
               <div class="row">
                 <div class="input-field col s12">
-                  <input id="password" type="password" class="validate">
+                  <input name="credentials[password]" type="password" class="validate">
                   <label for="password">Password</label>
                 </div>
                 <input type="submit" value="Sign In" class="s12 btn btn-secondary">
               </div>
-
               <div class="bottom text-center">
                   <p>No Account?<br><a href="#" class="sign-up-toggle">Sign Up Now</a></p>
                 </div>
+              </div>
             </form>
           </div>
+
+          <div class="divider"></div>
+
+          <div class="col s6 content-section">
+            <form id="change-password-form" class="inner-fields">
+              <div class="form-group">
+                <label for="changePassword">Change Password</label>
+                <div class="row">
+                  <div class="input-field col s12">
+                    <input name="passwords[old]" type="password" class="validate">
+                    <label for="oldPassword">Old Password</label>
+                  </div>
+                </div>
+                <div class="row">
+                  <div class="input-field col s12">
+                  <input name="passwords[new]" type="password" class="validate">
+                  <label for="newPassword">New Password</label>
+                  </div>
+                </div>
+                <input type="submit" value="Update" class="s12 btn btn-secondary">
+
+              </div>
+            </form>
+          </div>
+
         </div>
+
+
+
+      </section>
+
+      <section class="user-message-box container">
+        <div id="user-message" class="bottom-message"></div>
       </section>
 
 
