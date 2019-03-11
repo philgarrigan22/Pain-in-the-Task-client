@@ -4,14 +4,102 @@
       <title>Example</title>
       <meta name="viewport" content="width=device-width, initial-scale=1">
 
+      <!-- Compiled and minified CSS -->
+      <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/css/materialize.min.css">
+      <!-- Compiled and minified JavaScript -->
+      <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/js/materialize.min.js"></script>
+      <!--Import Google Icon Font-->
+      <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+
+
       <!-- Do not add `link` tags-->
       <link rel="shortcut icon" type="image/x-icon" href="favicon.ico">
-
       <!-- Do not add `script` tags-->
       <script src="public/vendor.js" type="text/javascript" charset="utf-8" defer></script>
       <script src="public/application.js" type="text/javascript" charset="utf-8" defer></script>
+
     </head>
     <body>
+      <nav>
+      <!-- Side Nav Button -->
+        <a href="#" data-target="slide-out" class="sidenav-trigger"><i class="material-icons">menu</i></a>
+
+      <!-- navbar content here  -->
+      </nav>
+
+      <!-- Side Nav Bar Content -->
+      <ul id="slide-out" class="sidenav">
+        <li>
+          <div class="user-view">
+            <div class="background">
+              <img src="#">
+            </div>
+            <a href="#user"><img class="circle" src="#"></a>
+            <a href="#name"><span class="white-text name">John Doe</span></a>
+            <a href="#email"><span class="white-text email">jdandturk@gmail.com</span></a>
+          </div>
+        </li>
+        <li><a href="#!"><i class="material-icons">cloud</i>First Link With Icon</a></li>
+        <li><a href="#!">Second Link</a></li>
+        <li><div class="divider"></div></li>
+        <li><a class="subheader">Subheader</a></li>
+        <li><a class="waves-effect" href="#!">Third Link With Waves</a></li>
+      </ul>
+
       <h1>Browser Template</h1>
+
+      <div class="row content">
+        <div class="col s12 content-section">This div is 12-columns wide on all screen sizes</div>
+        <div class="col s6 content-section">6-columns (one-half)</div>
+        <div class="col s6 content-section">6-columns (one-half)</div>
+      </div>
+
+      <div class="divider"></div>
+
+      <section class="content container">
+        <div class="row user-options">
+          <div id="sign-up-box" class="col s6 content-section">
+            <form id="sign-up-form" class="inner-fields">
+              <div class="form-group">
+                <label for="signUp">Sign-Up</label>
+                <input name="credentials[email]" type="email" class="form-control" aria-describedby="emailSignUp" placeholder="Enter email">
+                <input name="credentials[password]" type="password" class="form-control" aria-describedby="passwordSignUp" placeholder="Password">
+                <input name="credentials[password_confirmation]" type="password" class="form-control" aria-describedby="passwordConfirmSignUp" placeholder="Password Confirmation">
+                <input type="submit" value="Sign Up" class="col-12 btn btn-secondary">
+                <div class="bottom text-center">
+                  <p><a href="#" class="sign-up-cancel-toggle">Cancel</a></p>
+                </div>
+              </div>
+            </form>
+          </div>
+
+          <div id="sign-in-box" class="col s6 content-section">
+            <form id="sign-in-form" "sign-up-form" class="inner-fields">
+              <label for="signIn">Sign-In</label>
+              <div class="row">
+                <div class="input-field col s12">
+                  <input id="email" type="email" class="validate">
+                  <label for="email">Email</label>
+                </div>
+              </div>
+              <div class="row">
+                <div class="input-field col s12">
+                  <input id="password" type="password" class="validate">
+                  <label for="password">Password</label>
+                </div>
+                <input type="submit" value="Sign In" class="s12 btn btn-secondary">
+              </div>
+
+              <div class="bottom text-center">
+                  <p>No Account?<br><a href="#" class="sign-up-toggle">Sign Up Now</a></p>
+                </div>
+            </form>
+          </div>
+        </div>
+      </section>
+
+
+      <button type="button" id="sign-out-button" class="btn btn-secondary hidden">Sign Out</button>
+
     </body>
 </html>
