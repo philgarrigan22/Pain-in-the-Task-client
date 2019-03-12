@@ -130,19 +130,19 @@
               <label for="createTask">Create Task</label>
               <div class="row">
                 <div class="input-field col s12">
-                  <input name="title" type="text" class="validate">
+                  <input name="task[title]" type="text" class="validate">
                   <label for="createTask">New Task</label>
                 </div>
               </div>
               <div class="row">
                 <div class="input-field col s12">
-                <input name="description" type="text" class="validate">
+                <input name="task[description]" type="text" class="validate">
                 <label for="description">Description</label>
                 </div>
               </div>
               <div class="row">
                 <div class="input-field col s12">
-                <input name="target_date" type="text" class="validate">
+                <input name="task[target_date]" type="text" class="validate">
                 <label for="targetDate">Date to Complete</label>
                 </div>
               </div>
@@ -151,9 +151,62 @@
             </div>
           </form>
         </div>
+        </div>
       </div>
+    </section>
 
-      </section>
+    <div class="divider"></div>
+
+    <section class="row container">
+        <div class="col s6">
+          <form id="update-task-form" class="inner-fields">
+            <div class="form-group">
+              <label for="updateTask">Update Task</label>
+              <div class="row">
+                <div class="input-field col s12">
+                  <input name="task[task_id]" type="number" class="validate">
+                  <label for="taskId">Task ID</label>
+                </div>
+              </div>
+              <div class="row">
+                <div class="input-field col s12">
+                  <input name="task[title]" type="text" class="validate">
+                  <label for="updateTask">Update Task Title</label>
+                </div>
+              </div>
+              <div class="row">
+                <div class="input-field col s12">
+                <input name="task[description]" type="text" class="validate">
+                <label for="description">Update Description</label>
+                </div>
+              </div>
+              <div class="row">
+                <div class="input-field col s12">
+                <input name="task[target_date]" type="text" class="validate">
+                <label for="targetDate">Update Date</label>
+                </div>
+              </div>
+              <input type="submit" value="Update" class="s12 btn btn-secondary">
+            </div>
+          </form>
+        </div>
+
+        <div class="col s6">
+          <form id="delete-task-form" class="inner-fields">
+            <div class="form-group">
+              <label for="deleteTask">Delete Task</label>
+              <div class="row">
+                <div class="input-field col s12">
+                  <input name="task[task_id]" type="number" class="validate">
+                  <label for="taskId">Task ID</label>
+                </div>
+              </div>
+              <input type="submit" value="Delete" class="s12 btn btn-secondary">
+            </div>
+          </form>
+        </div>
+
+    </section>
 
       <section class="user-message-box container">
         <div id="user-message" class="bottom-message"></div>
@@ -164,7 +217,7 @@
       </div>
 
       <section class="tasks-content">
-        <h3 id="show-tasks-list"></h3>
+        <div id="show-tasks-list"></div>
       </section>
 
 

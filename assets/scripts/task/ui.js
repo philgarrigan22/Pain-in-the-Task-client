@@ -10,7 +10,7 @@ const showTasksSuccess = (responseData) => {
 
   responseData.tasks.forEach(task => {
     const taskHtml = (`
-      <h3>Title: ${task.title}</h3>
+      <h2>Title: ${task.title}</h2>
       <p>Description: ${task.description}</p>
       <p>Due Date: ${task.target_date}</p>
       <br>
@@ -27,7 +27,49 @@ const showTasksFailure = () => {
   $(`form`).trigger(`reset`)
 }
 
+// Display success message, then reset form fields.
+const createTaskSuccess = () => {
+  appActions.temporaryMessage('#user-message', 'Successfully Created Task')
+  $(`form`).trigger(`reset`)
+}
+
+// Display error message, then reset form fields.
+const createTaskFailure = () => {
+  appActions.temporaryMessage('#user-message', 'Unable to create task')
+  $(`form`).trigger(`reset`)
+}
+
+// Display success message, then reset form fields.
+const updateTaskSuccess = () => {
+  appActions.temporaryMessage('#user-message', 'Successfully Updated Task')
+  $(`form`).trigger(`reset`)
+}
+
+// Display error message, then reset form fields.
+const updateTaskFailure = () => {
+  appActions.temporaryMessage('#user-message', 'Unable to update task')
+  $(`form`).trigger(`reset`)
+}
+
+// Display success message, then reset form fields.
+const deleteTaskSuccess = () => {
+  appActions.temporaryMessage('#user-message', 'Task deleted')
+  $(`form`).trigger(`reset`)
+}
+
+// Display error message, then reset form fields.
+const deleteTaskFailure = () => {
+  appActions.temporaryMessage('#user-message', 'Unable to delete task')
+  $(`form`).trigger(`reset`)
+}
+
 module.exports = {
   showTasksSuccess,
-  showTasksFailure
+  showTasksFailure,
+  createTaskSuccess,
+  createTaskFailure,
+  updateTaskSuccess,
+  updateTaskFailure,
+  deleteTaskSuccess,
+  deleteTaskFailure
 }

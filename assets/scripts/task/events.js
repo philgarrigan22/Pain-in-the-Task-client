@@ -7,18 +7,14 @@ const ui = require('./ui.js')
 const onCreateTask = event => {
   event.preventDefault()
   console.log('onCreateTask has started')
-  const tasks = getFormFields(event.target)
+  const formData = getFormFields(event.target)
 
   console.log('form data is......')
-  console.log(tasks)
+  console.log(formData)
 
-  const data = {
-    tasks
-  }
-
-  api.createTask(data)
-  // .then(ui.createTaskSuccess)
-  // .catch(ui.createTaskFailure)
+  api.createTask(formData)
+    .then(ui.createTaskSuccess)
+    .catch(ui.createTaskFailure)
 }
 
 const onShowTasks = event => {
@@ -28,7 +24,35 @@ const onShowTasks = event => {
     .catch(ui.showTasksFailure)
 }
 
+const onUpdateTask = event => {
+  event.preventDefault()
+  console.log('onUpdateTask has started')
+  const formData = getFormFields(event.target)
+
+  console.log('form data is......')
+  console.log(formData)
+
+  api.updateTask(formData)
+    .then(ui.updateTaskSuccess)
+    .catch(ui.updateTaskFailure)
+}
+
+const onDeleteTask = event => {
+  event.preventDefault()
+  console.log('onDeleteTask has started')
+  const formData = getFormFields(event.target)
+
+  console.log('form data is......')
+  console.log(formData)
+
+  api.deleteTask(formData)
+    .then(ui.deleteTaskSuccess)
+    .catch(ui.deleteTaskFailure)
+}
+
 module.exports = {
   onCreateTask,
-  onShowTasks
+  onShowTasks,
+  onUpdateTask,
+  onDeleteTask
 }

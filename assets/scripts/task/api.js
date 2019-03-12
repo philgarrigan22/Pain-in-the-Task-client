@@ -1,19 +1,18 @@
 const config = require('../config.js')
 const store = require('../store.js')
 
-const createTask = (data) => {
+const createTask = (formData) => {
   console.log('API REQUEST INVOKED')
   console.log('FORM DATA IS')
-  console.log(data)
+  console.log(formData)
 
   return $.ajax({
     url: config.apiUrl + '/tasks',
     method: 'POST',
-    contentType: 'application/json',
     headers: {
       Authorization: 'Token token=' + store.user.token
     },
-    data: data
+    data: formData
   })
 }
 
@@ -28,7 +27,38 @@ const showTasks = () => {
   })
 }
 
+const updateTask = (formData) => {
+  console.log('API REQUEST INVOKED')
+  console.log('FORM DATA IS')
+  console.log(formData)
+
+  return $.ajax({
+    url: config.apiUrl + '/tasks/' + formData.task.task_id,
+    method: 'PATCH',
+    headers: {
+      Authorization: 'Token token=' + store.user.token
+    },
+    data: formData
+  })
+}
+
+const deleteTask = (formData) => {
+  console.log('API REQUEST INVOKED')
+  console.log('FORM DATA IS')
+  console.log(formData)
+
+  return $.ajax({
+    url: config.apiUrl + '/tasks/' + formData.task.task_id,
+    method: 'DELETE',
+    headers: {
+      Authorization: 'Token token=' + store.user.token
+    }
+  })
+}
+
 module.exports = {
   createTask,
-  showTasks
+  showTasks,
+  updateTask,
+  deleteTask
 }

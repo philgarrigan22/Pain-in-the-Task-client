@@ -20,6 +20,8 @@ $(() => {
 
   $('#create-task-form').on('submit', taskEvents.onCreateTask)
   $('#show-tasks-button').on('click', taskEvents.onShowTasks)
+  $('#update-task-form').on('submit', taskEvents.onUpdateTask)
+  $('#delete-task-form').on('submit', taskEvents.onDeleteTask)
 
   // $('#new-game-button').on('click', gameEvents.onCreateGame)
   // $('#get-games-button').on('click', gameEvents.onShowGames)
