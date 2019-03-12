@@ -1,0 +1,38 @@
+{{#each tasks as |task|}}
+  {{log task}}
+  <!-- Don't uncomment yet -->
+
+  <section class="task">
+    <h2 data-id="{{task.id}}">
+      <small>Title:</small> {{task.title}}
+    </h2>
+    <p>
+      <small>Description:</small>
+      {{#if task.description}}
+        {{task.description}}
+      {{else}}
+        ''
+      {{/if}}
+    </p>
+    <p>
+      <small>Due Date:</small>
+      {{#if task.target_date}}
+        {{task.target_date}}
+      {{else}}
+        ''
+      {{/if}}
+    </p>
+    <button class="btn btn-danger" data-id="{{task.id}}">Delete!</button>
+  </section>
+
+
+{{/each}}
+
+<!-- responseData.tasks.forEach(task => {
+   const taskHtml = (`
+     <h2>Title: ${task.title}</h2>
+     <p>Description: ${task.description}</p>
+     <p>Due Date: ${task.target_date}</p>
+     <br>
+     `)
+   $('#show-tasks-list').append(taskHtml) -->

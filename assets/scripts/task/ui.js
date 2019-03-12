@@ -1,5 +1,5 @@
 'use strict'
-// const store = require('../store.js')
+const showTasksTemplate = require('../templates/task-listing.handlebars')
 const appActions = require('../application/application-actions.js')
 
 // Display message, reset form fields, then show amount of games played.
@@ -8,17 +8,18 @@ const showTasksSuccess = (responseData) => {
   appActions.temporaryMessage('#user-message', 'Successfully accesed tasks.')
   $(`form`).trigger(`reset`)
 
-  responseData.tasks.forEach(task => {
-    const taskHtml = (`
-      <h2>Title: ${task.title}</h2>
-      <p>Description: ${task.description}</p>
-      <p>Due Date: ${task.target_date}</p>
-      <br>
-      `)
-    $('#show-tasks-list').append(taskHtml)
-  })
-  // $('#show-games-list').removeClass('hidden')
-  // $('.game-stats').removeClass('hidden')
+  // Handlebars
+  const showTasksHtml = showTasksTemplate({ tasks: responseData.tasks })
+  $('.show-tasks-list').append(showTasksHtml)
+  // responseData.tasks.forEach(task => {
+  //   const taskHtml = (`
+  //     <h2>Title: ${task.title}</h2>
+  //     <p>Description: ${task.description}</p>
+  //     <p>Due Date: ${task.target_date}</p>
+  //     <br>
+  //     `)
+  //   $('#show-tasks-list').append(taskHtml)
+  // })
 }
 
 // Display error message, then reset form fields.

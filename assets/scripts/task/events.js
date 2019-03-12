@@ -24,6 +24,13 @@ const onShowTasks = event => {
     .catch(ui.showTasksFailure)
 }
 
+const onShowTasksUpdate = event => {
+  $('.show-tasks-list').text('')
+  api.showTasks()
+    .then(ui.showTasksSuccess)
+    .catch(ui.showTasksFailure)
+}
+
 const onUpdateTask = event => {
   event.preventDefault()
   console.log('onUpdateTask has started')
@@ -37,16 +44,30 @@ const onUpdateTask = event => {
     .catch(ui.updateTaskFailure)
 }
 
+// const onDeleteTask = event => {
+//   event.preventDefault()
+//   console.log('onDeleteTask has started')
+//   const formData = getFormFields(event.target)
+//
+//   console.log('form data is......')
+//   console.log(formData)
+//
+//   api.deleteTask(formData)
+//     .then(ui.deleteTaskSuccess)
+//     .catch(ui.deleteTaskFailure)
+// }
+
 const onDeleteTask = event => {
   event.preventDefault()
   console.log('onDeleteTask has started')
-  const formData = getFormFields(event.target)
+  const taskId = $(event.target).data('id')
 
-  console.log('form data is......')
-  console.log(formData)
+  console.log('This is task id')
+  console.log(event.target)
+  console.log(taskId)
 
-  api.deleteTask(formData)
-    .then(ui.deleteTaskSuccess)
+  api.deleteTask(taskId)
+    .then(onShowTasksUpdate)
     .catch(ui.deleteTaskFailure)
 }
 

@@ -18,14 +18,10 @@ $(() => {
   $('#change-password-form').on('submit', authEvents.onChangePassword)
   $('#sign-out-button').on('click', authEvents.onSignOut)
 
+  // Task events
   $('#create-task-form').on('submit', taskEvents.onCreateTask)
   $('#show-tasks-button').on('click', taskEvents.onShowTasks)
   $('#update-task-form').on('submit', taskEvents.onUpdateTask)
-  $('#delete-task-form').on('submit', taskEvents.onDeleteTask)
-
-  // $('#new-game-button').on('click', gameEvents.onCreateGame)
-  // $('#get-games-button').on('click', gameEvents.onShowGames)
-  // $('.box').on('click', gameEvents.onNewMove)
-  // $('.sign-up-toggle').on('click', authEvents.onSignUpToggle)
-  // $('.sign-up-cancel-toggle').on('click', authEvents.onSignUpCancel)
+  // $('#delete-task-form').on('submit', taskEvents.onDeleteTask)
+  $('#show-tasks-list').on('click', '.btn-danger', taskEvents.onDeleteTask)
 })

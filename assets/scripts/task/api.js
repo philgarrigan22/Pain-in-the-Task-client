@@ -42,13 +42,27 @@ const updateTask = (formData) => {
   })
 }
 
-const deleteTask = (formData) => {
+// const deleteTask = (formData) => {
+//   console.log('API REQUEST INVOKED')
+//   console.log('FORM DATA IS')
+//   console.log(formData)
+//
+//   return $.ajax({
+//     url: config.apiUrl + '/tasks/' + formData.task.task_id,
+//     method: 'DELETE',
+//     headers: {
+//       Authorization: 'Token token=' + store.user.token
+//     }
+//   })
+// }
+
+const deleteTask = (taskId) => {
   console.log('API REQUEST INVOKED')
-  console.log('FORM DATA IS')
-  console.log(formData)
+  console.log('taskId')
+  console.log(taskId)
 
   return $.ajax({
-    url: config.apiUrl + '/tasks/' + formData.task.task_id,
+    url: config.apiUrl + '/tasks/' + taskId,
     method: 'DELETE',
     headers: {
       Authorization: 'Token token=' + store.user.token
