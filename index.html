@@ -99,6 +99,7 @@
 
           <div class="divider"></div>
 
+        <div class="row user-options">
           <div class="col s6 content-section">
             <form id="change-password-form" class="inner-fields">
               <div class="form-group">
@@ -121,9 +122,36 @@
             </form>
           </div>
 
+
+
+        <div class="col s6 content-section">
+          <form id="create-task-form" class="inner-fields">
+            <div class="form-group">
+              <label for="createTask">Create Task</label>
+              <div class="row">
+                <div class="input-field col s12">
+                  <input name="title" type="text" class="validate">
+                  <label for="createTask">New Task</label>
+                </div>
+              </div>
+              <div class="row">
+                <div class="input-field col s12">
+                <input name="description" type="text" class="validate">
+                <label for="description">Description</label>
+                </div>
+              </div>
+              <div class="row">
+                <div class="input-field col s12">
+                <input name="target_date" type="text" class="validate">
+                <label for="targetDate">Date to Complete</label>
+                </div>
+              </div>
+              <input type="submit" value="Create" class="s12 btn btn-secondary">
+
+            </div>
+          </form>
         </div>
-
-
+      </div>
 
       </section>
 
@@ -131,8 +159,16 @@
         <div id="user-message" class="bottom-message"></div>
       </section>
 
+      <div>
+        <button type="button" id="show-tasks-button" class="btn btn-secondary">Show Tasks</button>
+      </div>
 
-      <button type="button" id="sign-out-button" class="btn btn-secondary hidden">Sign Out</button>
+      <section class="tasks-content">
+        <h3 id="show-tasks-list"></h3>
+      </section>
+
+
+      <button type="button" id="sign-out-button" class="btn btn-secondary">Sign Out</button>
 
     </body>
 </html>
