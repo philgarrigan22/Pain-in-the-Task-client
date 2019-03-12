@@ -23,5 +23,5 @@ $(() => {
   $('#show-tasks-button').on('click', taskEvents.onShowTasks)
   $('#update-task-form').on('submit', taskEvents.onUpdateTask)
   // $('#delete-task-form').on('submit', taskEvents.onDeleteTask)
-  $('#show-tasks-list').on('click', '.btn-danger', taskEvents.onDeleteTask)
+  $('#show-tasks-list').on('click', '.delete-task-btn', taskEvents.onDeleteTask)
 })

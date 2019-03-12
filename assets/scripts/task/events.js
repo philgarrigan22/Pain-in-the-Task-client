@@ -18,18 +18,17 @@ const onCreateTask = event => {
 }
 
 const onShowTasks = event => {
-  event.preventDefault()
+  if (event) { event.preventDefault() }
   api.showTasks()
     .then(ui.showTasksSuccess)
     .catch(ui.showTasksFailure)
 }
 
-const onShowTasksUpdate = event => {
-  $('.show-tasks-list').text('')
-  api.showTasks()
-    .then(ui.showTasksSuccess)
-    .catch(ui.showTasksFailure)
-}
+// const onShowTasksUpdate = event => {
+//   api.showTasks()
+//     .then(ui.showTasksSuccess)
+//     .catch(ui.showTasksFailure)
+// }
 
 const onUpdateTask = event => {
   event.preventDefault()
@@ -67,7 +66,7 @@ const onDeleteTask = event => {
   console.log(taskId)
 
   api.deleteTask(taskId)
-    .then(onShowTasksUpdate)
+    .then(onShowTasks)
     .catch(ui.deleteTaskFailure)
 }
 

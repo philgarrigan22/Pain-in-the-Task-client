@@ -10,6 +10,7 @@ const showTasksSuccess = (responseData) => {
 
   // Handlebars
   const showTasksHtml = showTasksTemplate({ tasks: responseData.tasks })
+  $('.show-tasks-list').empty()
   $('.show-tasks-list').append(showTasksHtml)
   // responseData.tasks.forEach(task => {
   //   const taskHtml = (`
