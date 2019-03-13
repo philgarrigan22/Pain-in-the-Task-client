@@ -42,6 +42,21 @@ const updateTask = (formData) => {
   })
 }
 
+const updateTaskModal = (formData, modalId) => {
+  console.log('API REQUEST INVOKED')
+  console.log('FORM DATA IS')
+  console.log(formData)
+
+  return $.ajax({
+    url: config.apiUrl + '/tasks/' + modalId,
+    method: 'PATCH',
+    headers: {
+      Authorization: 'Token token=' + store.user.token
+    },
+    data: formData
+  })
+}
+
 // const deleteTask = (formData) => {
 //   console.log('API REQUEST INVOKED')
 //   console.log('FORM DATA IS')
@@ -74,5 +89,6 @@ module.exports = {
   createTask,
   showTasks,
   updateTask,
-  deleteTask
+  deleteTask,
+  updateTaskModal
 }
