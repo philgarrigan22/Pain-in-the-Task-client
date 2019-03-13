@@ -22,10 +22,11 @@ $(() => {
   // Task events
   $('#create-task-form').on('submit', taskEvents.onCreateTask)
   $('#show-tasks-button').on('click', taskEvents.onShowTasks)
-  $('#update-task-form').on('submit', taskEvents.onUpdateTask)
+  // $('#update-task-form').on('submit', taskEvents.onUpdateTask)
   // $('#delete-task-form').on('submit', taskEvents.onDeleteTask)
   // $('#update-task-modal-btn').on('click', taskEvents.onstoreModalUpdateId)
 
+  // Handlebars data events
   $('#show-tasks-list').on('submit', '.update-task-modal-form', taskEvents.onUpdateTaskModal)
   $('#show-tasks-list').on('click', '.delete-task-btn', taskEvents.onDeleteTask)
 })

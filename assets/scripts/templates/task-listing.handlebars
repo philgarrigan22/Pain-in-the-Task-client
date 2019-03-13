@@ -1,5 +1,4 @@
 {{#each tasks as |task|}}
-  {{log task}}
   <!-- Don't uncomment yet -->
 
   <section class="task">
@@ -51,7 +50,9 @@
                 <label for="targetDate">Update Date</label>
                 </div>
               </div>
-              <input type="submit" value="Update" class="s12 btn btn-secondary">
+              <div class="modal-footer">
+                <input type="submit" value="Update" class="s12 btn btn-secondary modal-close">
+              </div>
             </div>
           </form>
         </div>
@@ -59,9 +60,9 @@
 
       <!-- Modal Trigger -->
       <script>
-        $(document).ready(function(){
-          $('.modal').modal()
-        })
+      $(() => {
+        $('.modal').modal()
+      })
        </script>
   </div>
 

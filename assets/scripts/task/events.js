@@ -17,8 +17,9 @@ const onCreateTask = event => {
     .catch(ui.createTaskFailure)
 }
 
-const onShowTasks = event => {
-  if (event) { event.preventDefault() }
+const onShowTasks = () => {
+  console.log('onShowTasks')
+  // if (event !== undefined || event.type !== undefined) { event.preventDefault() }
   api.showTasks()
     .then(ui.showTasksSuccess)
     .catch(ui.showTasksFailure)
@@ -30,18 +31,18 @@ const onShowTasks = event => {
 //     .catch(ui.showTasksFailure)
 // }
 
-const onUpdateTask = event => {
-  event.preventDefault()
-  console.log('onUpdateTask has started')
-  const formData = getFormFields(event.target)
-
-  console.log('form data is......')
-  console.log(formData)
-
-  api.updateTask(formData)
-    .then(ui.updateTaskSuccess)
-    .catch(ui.updateTaskFailure)
-}
+// const onUpdateTask = event => {
+//   event.preventDefault()
+//   console.log('onUpdateTask has started')
+//   const formData = getFormFields(event.target)
+//
+//   console.log('form data is......')
+//   console.log(formData)
+//
+//   api.updateTask(formData)
+//     .then(ui.updateTaskSuccess)
+//     .catch(ui.updateTaskFailure)
+// }
 
 const onUpdateTaskModal = event => {
   event.preventDefault()
@@ -53,12 +54,12 @@ const onUpdateTaskModal = event => {
   const formData = getFormFields(event.target)
   const modalId = $(event.target).data('id')
 
-  console.log('this is form data then modalId')
-  console.log(formData)
-  console.log(modalId)
+  // console.log('this is form data then modalId')
+  // console.log(formData)
+  // console.log(modalId)
 
   api.updateTaskModal(formData, modalId)
-    .then(ui.updateTaskSuccess)
+    .then(onShowTasks)
     .catch(ui.updateTaskFailure)
 }
 
@@ -92,7 +93,6 @@ const onDeleteTask = event => {
 module.exports = {
   onCreateTask,
   onShowTasks,
-  onUpdateTask,
   onDeleteTask,
   onUpdateTaskModal
 }

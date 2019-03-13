@@ -1,6 +1,7 @@
 'use strict'
 const store = require('../store.js')
 const appActions = require('../application/application-actions.js')
+// const taskEvents = require('../task/events.js')
 
 // Display success message, then reset form fields.
 const signUpSuccess = () => {
@@ -14,6 +15,7 @@ const signUpSuccess = () => {
 const signInSuccess = (responseData) => {
   appActions.temporaryMessage('#user-message', 'Successfully Signed in')
   store.user = responseData.user
+  // taskEvents.onShowTasks()
   $(`form`).trigger(`reset`)
   // Once signed in, display the change password, sign out, new game, and get
   // games features. Then hide the sign-up / sign-in buttons.

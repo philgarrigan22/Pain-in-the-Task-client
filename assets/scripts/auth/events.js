@@ -2,6 +2,7 @@
 const getFormFields = require('../../../lib/get-form-fields.js')
 const api = require('./api.js')
 const ui = require('./ui.js')
+const taskEvents = require('../task/events.js')
 
 const onSignUp = (event) => {
   event.preventDefault()
@@ -17,6 +18,7 @@ const onSignIn = (event) => {
   api.signIn(formData)
     .then(ui.signInSuccess)
     .catch(ui.signUpFailure)
+    .then(taskEvents.onShowTasks)
 }
 
 const onChangePassword = (event) => {

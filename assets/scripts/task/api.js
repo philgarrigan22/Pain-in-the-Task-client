@@ -17,6 +17,7 @@ const createTask = (formData) => {
 }
 
 const showTasks = () => {
+  console.log('showTasks')
   return $.ajax({
     url: config.apiUrl + '/tasks',
     method: 'GET',

@@ -3,15 +3,19 @@ const showTasksTemplate = require('../templates/task-listing.handlebars')
 const appActions = require('../application/application-actions.js')
 
 // Display message, reset form fields, then show amount of games played.
+
 const showTasksSuccess = (responseData) => {
-  console.log(responseData)
-  appActions.temporaryMessage('#user-message', 'Successfully accesed tasks.')
-  $(`form`).trigger(`reset`)
+  console.log('showTasksSuccess')
+  // console.log(responseData)
+  // appActions.temporaryMessage('#user-message', 'Successfully accesed tasks.')
+  // $(`form`).trigger(`reset`)
 
   // Handlebars
+
   const showTasksHtml = showTasksTemplate({ tasks: responseData.tasks })
   $('.show-tasks-list').empty()
   $('.show-tasks-list').append(showTasksHtml)
+
   // responseData.tasks.forEach(task => {
   //   const taskHtml = (`
   //     <h2>Title: ${task.title}</h2>
