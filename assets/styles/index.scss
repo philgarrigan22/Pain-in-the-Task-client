@@ -9,22 +9,9 @@ body {
 }
 
 .content {
-  text-align: center;
-  display: flex;
+  padding-top: 3em;
 }
 
-.content-section {
-  border: 1px;
-  ;
-}
-
-.divider {
-  padding: 2em;
-}
-
-// .hidden {
-//   display: none;
-// }
 
 
 // Handlebars content
@@ -60,4 +47,8 @@ main {
       border-top: 1px solid;
     }
   }
+}
+
+.hidden {
+  display: none;
 }

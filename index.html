@@ -20,11 +20,17 @@
 
     </head>
     <body>
-      <nav>
-      <!-- Side Nav Button -->
-        <a href="#" data-target="slide-out" class="sidenav-trigger"><i class="material-icons">menu</i></a>
 
-      <!-- navbar content here  -->
+      <!-- navbar content  -->
+      <nav class="nav-wraper blue darken-2">
+        <!-- Side Nav Button -->
+        <a href="#" data-target="slide-out" class="sidenav-trigger show-on-large">
+          <i class="material-icons">menu</i>
+        </a>
+        <a href="#" class="brand-logo center">Pain in the Task</a>
+        <ul class="right">
+          <li><a href="#">Home</a></li>
+        </ul>
       </nav>
 
       <!-- Side Nav Bar Content -->
@@ -32,13 +38,19 @@
         <li>
           <div class="user-view">
             <div class="background">
-              <img src="#">
+              <img class="responsive-img sidenav-image" src="https://i.imgur.com/dTEIWj8.jpg">
             </div>
-            <a href="#user"><img class="circle" src="#"></a>
+            <a href="#user"><img class="circle" src="https://i.imgur.com/A5SDHwX.png"></a>
             <a href="#name"><span class="white-text name">John Doe</span></a>
             <a href="#email"><span class="white-text email">jdandturk@gmail.com</span></a>
           </div>
         </li>
+
+        <!-- Modal Trigger -->
+        <li>
+         <a class="waves-effect waves-light modal-trigger" href="#modal1">Modal</a>
+        </li>
+
         <li><a href="#!"><i class="material-icons">cloud</i>First Link With Icon</a></li>
         <li><a href="#!">Second Link</a></li>
         <li><div class="divider"></div></li>
@@ -46,15 +58,17 @@
         <li><a class="waves-effect" href="#!">Third Link With Waves</a></li>
       </ul>
 
-      <h1>Browser Template</h1>
 
-      <div class="row content">
-        <div class="col s12 content-section">This div is 12-columns wide on all screen sizes</div>
-        <div class="col s6 content-section">6-columns (one-half)</div>
-        <div class="col s6 content-section">6-columns (one-half)</div>
+      <!-- Modal Structure -->
+     <div id="modal1" class="modal">
+        <div class="modal-content">
+          <h4>Modal Header</h4>
+          <p>A bunch of text</p>
+        </div>
+        <div class="modal-footer">
+          <a href="#!" class="modal-close waves-effect waves-green btn-flat">Agree</a>
+        </div>
       </div>
-
-      <div class="divider"></div>
 
       <section class="content container">
         <div class="row user-options">
