@@ -50,7 +50,10 @@
 
         <!-- Modal Trigger -->
         <li>
-         <a class="waves-effect waves-light modal-trigger" href="#modal1">Modal</a>
+         <a id="change-password-modal" class="waves-effect waves-light modal-trigger hide" href="#change-password-modal">Change Password</a>
+        </li>
+        <li>
+          <a id="sign-out-button" class="waves-effect hide">Sign Out</a>
         </li>
 
         <li><a href="#!"><i class="material-icons">cloud</i>First Link With Icon</a></li>
@@ -61,19 +64,40 @@
       </ul>
 
       <!-- Sidenav Modal Structure -->
-     <div id="modal1" class="modal">
-        <div class="modal-content">
-          <h4>Modal Header</h4>
-          <p>A bunch of text</p>
-        </div>
-        <div class="modal-footer">
-          <a href="#!" class="modal-close waves-effect waves-green btn-flat">Agree</a>
-        </div>
+     <div id="change-password-modal" class="modal">
+          <div class="row modal-content">
+            <div class="col s12 content-section">
+              <form id="change-password-form" class="inner-fields">
+                <div class="form-group">
+                  <label for="changePassword">Change Password</label>
+                  <div class="row">
+                    <div class="input-field col s12">
+                      <input name="passwords[old]" type="password" class="validate">
+                      <label for="oldPassword">Old Password</label>
+                    </div>
+                  </div>
+                  <div class="row">
+                    <div class="input-field col s12">
+                    <input name="passwords[new]" type="password" class="validate">
+                    <label for="newPassword">New Password</label>
+                    </div>
+                  </div>
+                  <div class="modal-footer">
+                    <input type="submit" value="Update" class="modal-close btn btn-secondary waves-effect waves-green">
+                  </div>
+                </div>
+              </form>
+            </div>
+          </div>
       </div>
 
+      <!-- User Authorization Section -->
       <section class="content container">
-        <div class="row user-options">
-          <div id="sign-up-box" class="col s6 content-section">
+
+
+      <!-- User Sign-Up -->
+        <div class="row sign-up-box hide">
+          <div id="sign-up-box" class="content-section">
             <form id="sign-up-form" class="inner-fields">
               <div class="form-group">
                 <label for="signUp">Sign-Up</label>
@@ -82,13 +106,18 @@
                 <input name="credentials[password_confirmation]" type="password" class="form-control" aria-describedby="passwordConfirmSignUp" placeholder="Password Confirmation">
                 <input type="submit" value="Sign Up" class="col-12 btn btn-secondary">
                 <div class="bottom text-center">
-                  <p><a href="#" class="sign-up-cancel-toggle">Cancel</a></p>
+                  <p>Already have an account?</p>
+                  <p><a href="#" class="sign-in-toggle">Log-in</a></p>
                 </div>
               </div>
             </form>
           </div>
+        </div>
 
-          <div id="sign-in-box" class="col s6 content-section">
+
+      <!-- User Sign-In -->
+        <div class="row sign-in-box">
+          <div id="sign-in-box" class="content-section">
             <form id="sign-in-form" class="inner-fields">
               <div class="form-group">
               <label for="signIn">Sign-In</label>
@@ -111,35 +140,21 @@
               </div>
             </form>
           </div>
+        </div>
+      </section>
 
-          <div class="divider"></div>
+      <!-- Create Task Section -->
+      <div class="create-task-section hide">
+          <h3>Tasks</h3>
 
-        <div class="row user-options">
-          <div class="col s6 content-section">
-            <form id="change-password-form" class="inner-fields">
-              <div class="form-group">
-                <label for="changePassword">Change Password</label>
-                <div class="row">
-                  <div class="input-field col s12">
-                    <input name="passwords[old]" type="password" class="validate">
-                    <label for="oldPassword">Old Password</label>
-                  </div>
-                </div>
-                <div class="row">
-                  <div class="input-field col s12">
-                  <input name="passwords[new]" type="password" class="validate">
-                  <label for="newPassword">New Password</label>
-                  </div>
-                </div>
-                <input type="submit" value="Update" class="s12 btn btn-secondary">
+        <div class="fixed-action-btn direction-top" style="bottom: 45px; right: 24px;">
+          <a class="btn-floating btn-large red waves-effect waves-light red">
+            <i class="material-icons">add</i>
+          </a>
+        </div>
+      </div>
 
-              </div>
-            </form>
-          </div>
-
-
-
-        <div class="col s6 content-section">
+        <!-- <div class="col s6 content-section">
           <form id="create-task-form" class="inner-fields">
             <div class="form-group">
               <label for="createTask">Create Task</label>
@@ -165,14 +180,12 @@
 
             </div>
           </form>
-        </div>
-        </div>
-      </div>
-    </section>
+        </div> -->
 
-    <div class="divider"></div>
 
-    <section class="row container">
+    <!-- <div class="divider"></div> -->
+
+    <!-- <section class="row container">
         <div class="col s6">
           <form id="update-task-form" class="inner-fields">
             <div class="form-group">
@@ -221,23 +234,21 @@
           </form>
         </div>
 
-    </section>
+    </section> -->
 
       <section class="user-message-box container">
         <div id="user-message" class="bottom-message"></div>
       </section>
 
-      <div>
+      <!-- <div>
         <button type="button" id="show-tasks-button" class="btn btn-secondary">Show Tasks</button>
-      </div>
+      </div> -->
 
-      <main>
-        <section class="container tasks-content">
+      <main class="container">
+        <section class="row tasks-content hide">
           <div id="show-tasks-list" class="show-tasks-list"></div>
         </section>
       </main>
-
-      <button type="button" id="sign-out-button" class="btn btn-secondary">Sign Out</button>
 
     </body>
 </html>

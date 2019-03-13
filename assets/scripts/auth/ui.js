@@ -4,28 +4,26 @@ const appActions = require('../application/application-actions.js')
 // const taskEvents = require('../task/events.js')
 
 // Display success message, then reset form fields.
-const signUpSuccess = () => {
-  appActions.temporaryMessage('#user-message', 'Successfully Created User')
-  $(`form`).trigger(`reset`)
-  // $('#sign-up-box').addClass('hidden')
-  // $('#sign-in-box').removeClass('hidden')
-}
+// const signUpSuccess = () => {
+//   appActions.temporaryMessage('#user-message', 'Successfully Created User')
+//   $(`form`).trigger(`reset`)
+// $('#sign-up-box').addClass('hide')
+// $('#sign-in-box').removeClass('hide')
+// }
 
 // Display success message, save the user info to store, and reset form fields.
 const signInSuccess = (responseData) => {
   appActions.temporaryMessage('#user-message', 'Successfully Signed in')
   store.user = responseData.user
-  // taskEvents.onShowTasks()
   $(`form`).trigger(`reset`)
-  // Once signed in, display the change password, sign out, new game, and get
-  // games features. Then hide the sign-up / sign-in buttons.
-  // $('#change-password-form').removeClass('hidden')
-  // $('#sign-out-button').removeClass('hidden')
-  // $('#new-game-button').removeClass('hidden')
-  // $('#get-games-button').removeClass('hidden')
-  // $('.dropdown').removeClass('hidden')
-  // $('#sign-up-box').addClass('hidden')
-  // $('#sign-in-box').addClass('hidden')
+
+  // Hide Authorization and Show Task Features.
+  $('#change-password-modal').removeClass('hide')
+  $('#sign-out-button').removeClass('hide')
+  $('.create-task-section').removeClass('hide')
+  $('.tasks-content').removeClass('hide')
+  $('.sign-up-box').addClass('hide')
+  $('.sign-in-box').addClass('hide')
 }
 
 // Used for both sign up and sign in failure. display message, then reset form fields.
@@ -52,16 +50,16 @@ const signOutSuccess = () => {
   $(`form`).trigger(`reset`)
 
   // Hide all logged-in content, show sign-in options
-  // $('#sign-in-box').removeClass('hidden')
-  // $('#change-password-form').addClass('hidden')
-  // $('#sign-out-button').addClass('hidden')
-  // $('#new-game-button').addClass('hidden')
-  // $('#get-games-button').addClass('hidden')
-  // $('.dropdown').addClass('hidden')
-  // $('.game-board').addClass('hidden')
-  // $('.game-stats').addClass('hidden')
-  // $('#show-games-list').addClass('hidden')
-  // $('#game-message').addClass('hidden')
+  // $('#sign-in-box').removeClass('hide')
+  // $('#change-password-form').addClass('hide')
+  // $('#sign-out-button').addClass('hide')
+  // $('#new-game-button').addClass('hide')
+  // $('#get-games-button').addClass('hide')
+  // $('.dropdown').addClass('hide')
+  // $('.game-board').addClass('hide')
+  // $('.game-stats').addClass('hide')
+  // $('#show-games-list').addClass('hide')
+  // $('#game-message').addClass('hide')
   // $('#show-games-list').html('')
 }
 
@@ -72,7 +70,7 @@ const signOutFailure = () => {
 }
 
 module.exports = {
-  signUpSuccess,
+  // signUpSuccess,
   signUpFailure,
   signInSuccess,
   changePasswordSuccess,

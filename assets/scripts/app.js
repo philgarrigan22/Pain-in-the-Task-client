@@ -18,6 +18,8 @@ $(() => {
   $('#sign-in-form').on('submit', authEvents.onSignIn)
   $('#change-password-form').on('submit', authEvents.onChangePassword)
   $('#sign-out-button').on('click', authEvents.onSignOut)
+  $('.sign-in-toggle').on('click', authEvents.onSignInToggle)
+  $('.sign-up-toggle').on('click', authEvents.onSignUpToggle)
 
   // Task events
   $('#create-task-form').on('submit', taskEvents.onCreateTask)

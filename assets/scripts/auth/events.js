@@ -8,7 +8,13 @@ const onSignUp = (event) => {
   event.preventDefault()
   const formData = getFormFields(event.target)
   api.signUp(formData)
-    .then(ui.signUpSuccess)
+    .then(() => { onSignUpSignIn(formData) })
+    .catch(ui.signUpFailure)
+}
+
+const onSignUpSignIn = (formData) => {
+  api.signIn(formData)
+    .then(ui.signInSuccess)
     .catch(ui.signUpFailure)
 }
 
@@ -36,9 +42,21 @@ const onSignOut = () => {
     .catch(ui.signOutFailure)
 }
 
+const onSignInToggle = () => {
+  $('.sign-up-box').addClass('hide')
+  $('.sign-in-box').removeClass('hide')
+}
+
+const onSignUpToggle = () => {
+  $('.sign-up-box').removeClass('hide')
+  $('.sign-in-box').addClass('hide')
+}
+
 module.exports = {
   onSignUp,
   onSignIn,
   onChangePassword,
-  onSignOut
+  onSignOut,
+  onSignInToggle,
+  onSignUpToggle
 }
