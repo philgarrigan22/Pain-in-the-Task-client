@@ -25,6 +25,9 @@ const signInSuccess = (responseData) => {
   // $('.sidenav-trigger').removeClass('hide')
   $('.sign-up-box').addClass('hide')
   $('.sign-in-box').addClass('hide')
+  // Add username in sidenav display and show welcome
+  $(`#username`).text(`${store.user.email}`)
+  $(`#user-status`).text('Welcome to Pain in the Task!')
 }
 
 // Used for both sign up and sign in failure. display message, then reset form fields.
@@ -57,6 +60,9 @@ const signOutSuccess = () => {
   $('.show-tasks-list').empty()
   $('.show-tasks-list').addClass('hide')
   // $('.sidenav-trigger').addClass('hide')
+  // clear username in sidenav display and show not logged in
+  $(`#username`).text(``)
+  $(`#user-status`).text(`Log In to Get Started`)
 }
 
 // Display failure message, then reset form fields.
