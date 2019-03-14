@@ -5,8 +5,8 @@ const appActions = require('../application/application-actions.js')
 // Display message, reset form fields, then show amount of games played.
 
 const showTasksSuccess = (responseData) => {
-  console.log('showTasksSuccess')
-  // console.log(responseData)
+  //console.log('showTasksSuccess')
+  // //console.log(responseData)
   // appActions.temporaryMessage('#user-message', 'Successfully accesed tasks.')
   // $(`form`).trigger(`reset`)
 
