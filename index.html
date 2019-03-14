@@ -89,8 +89,8 @@
       </div>
 
       <!-- User Messages Section -->
-      <section class="user-message-box container">
-        <div id="user-message" class="bottom-message"></div>
+      <section class="row user-message-box container">
+        <div id="user-message" class="s12 bottom-message"></div>
       </section>
 
       <!-- User Authorization Section -->
@@ -102,7 +102,6 @@
           <div id="sign-up-box" class="content-section">
             <form id="sign-up-form" class="inner-fields">
               <div class="form-group">
-                <label for="signUp">Sign-Up</label>
                 <input name="credentials[email]" type="email" class="form-control" aria-describedby="emailSignUp" placeholder="Enter email">
                 <input name="credentials[password]" type="password" class="form-control" aria-describedby="passwordSignUp" placeholder="Password">
                 <input name="credentials[password_confirmation]" type="password" class="form-control" aria-describedby="passwordConfirmSignUp" placeholder="Password Confirmation">
@@ -122,7 +121,6 @@
           <div id="sign-in-box" class="content-section">
             <form id="sign-in-form" class="inner-fields">
               <div class="form-group">
-              <label for="signIn">Sign-In</label>
               <div class="row">
                 <div class="input-field col s12">
                   <input name="credentials[email]" type="email" class="validate">
@@ -156,8 +154,9 @@
         <div class="flow-text">
           <p>Tasks</p>
         </div>
+      <!-- Create Task Button -->
         <div class="fixed-action-btn direction-top" style="bottom: 45px; right: 24px;">
-          <a class="btn-floating btn-large red waves-effect modal-trigger" href="#create-task-modal">
+          <a class="btn-floating btn-large pulse red modal-trigger" href="#create-task-modal">
             <i class="material-icons">add</i>
           </a>
         </div>
