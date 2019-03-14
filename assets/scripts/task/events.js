@@ -73,8 +73,6 @@ const onShowUpdateTaskModal = event => {
   console.log(event.target)
   $('.modal').modal()
   $('#updateTaskModal').modal('open')
-  // const instance = M.Modal.getInstance('#updateTaskModal-33')
-  // instance.open()
 }
 
 // const onDeleteTask = event => {

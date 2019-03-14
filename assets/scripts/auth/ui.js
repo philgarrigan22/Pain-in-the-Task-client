@@ -21,7 +21,8 @@ const signInSuccess = (responseData) => {
   $('#change-password-modal-trigger').removeClass('hide')
   $('#sign-out-button').removeClass('hide')
   $('.create-task-section').removeClass('hide')
-  $('.tasks-content').removeClass('hide')
+  $('.show-tasks-list').removeClass('hide')
+  // $('.sidenav-trigger').removeClass('hide')
   $('.sign-up-box').addClass('hide')
   $('.sign-in-box').addClass('hide')
 }
@@ -48,15 +49,14 @@ const changePasswordFailure = () => {
 const signOutSuccess = () => {
   appActions.temporaryMessage('#user-message', store.user.email + ' has successfully logged out!')
   $(`form`).trigger(`reset`)
-
   // Hide all logged-in content, show sign-in options
   $('.sign-in-box').removeClass('hide')
   $('#sign-out-button').addClass('hide')
   $('#change-password-modal-trigger').addClass('hide')
-  $('.tasks-content').addClass('hide')
   $('.create-task-section').addClass('hide')
   $('.show-tasks-list').empty()
   $('.show-tasks-list').addClass('hide')
+  // $('.sidenav-trigger').addClass('hide')
 }
 
 // Display failure message, then reset form fields.
