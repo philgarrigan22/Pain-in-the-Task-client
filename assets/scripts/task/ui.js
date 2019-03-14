@@ -5,8 +5,8 @@ const appActions = require('../application/application-actions.js')
 // Display message, reset form fields, then show amount of games played.
 
 const showTasksSuccess = (responseData) => {
-  //console.log('showTasksSuccess')
-  // //console.log(responseData)
+  // console.log('showTasksSuccess')
+  // console.log(responseData)
   // appActions.temporaryMessage('#user-message', 'Successfully accesed tasks.')
   // $(`form`).trigger(`reset`)
 
@@ -29,7 +29,6 @@ const showTasksSuccess = (responseData) => {
 
 // Display error message, then reset form fields.
 const showTasksFailure = () => {
-  appActions.temporaryMessage('#user-message', 'Unable to show tasks')
   $(`form`).trigger(`reset`)
 }
 

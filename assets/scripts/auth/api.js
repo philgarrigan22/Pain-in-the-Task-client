@@ -3,8 +3,8 @@ const store = require('../store.js')
 
 // From auth sign up
 const signUp = (formData) => {
-  //console.log('API signUP engaged')
-  //console.log(formData)
+  // console.log('API signUP engaged')
+  // console.log(formData)
 
   return $.ajax({
     url: config.apiUrl + '/sign-up',
