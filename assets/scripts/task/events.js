@@ -13,7 +13,11 @@ const onCreateTask = event => {
   console.log(formData)
 
   api.createTask(formData)
-    .then(ui.createTaskSuccess)
+    .then(function () {
+      onShowTasks()
+      ui.createTaskSuccess()
+    }
+    )
     .catch(ui.createTaskFailure)
 }
 

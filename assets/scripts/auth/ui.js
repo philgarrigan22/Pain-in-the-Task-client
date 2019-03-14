@@ -18,7 +18,7 @@ const signInSuccess = (responseData) => {
   $(`form`).trigger(`reset`)
 
   // Hide Authorization and Show Task Features.
-  $('#change-password-modal').removeClass('hide')
+  $('#change-password-modal-trigger').removeClass('hide')
   $('#sign-out-button').removeClass('hide')
   $('.create-task-section').removeClass('hide')
   $('.tasks-content').removeClass('hide')
@@ -50,17 +50,13 @@ const signOutSuccess = () => {
   $(`form`).trigger(`reset`)
 
   // Hide all logged-in content, show sign-in options
-  // $('#sign-in-box').removeClass('hide')
-  // $('#change-password-form').addClass('hide')
-  // $('#sign-out-button').addClass('hide')
-  // $('#new-game-button').addClass('hide')
-  // $('#get-games-button').addClass('hide')
-  // $('.dropdown').addClass('hide')
-  // $('.game-board').addClass('hide')
-  // $('.game-stats').addClass('hide')
-  // $('#show-games-list').addClass('hide')
-  // $('#game-message').addClass('hide')
-  // $('#show-games-list').html('')
+  $('.sign-in-box').removeClass('hide')
+  $('#sign-out-button').addClass('hide')
+  $('#change-password-modal-trigger').addClass('hide')
+  $('.tasks-content').addClass('hide')
+  $('.create-task-section').addClass('hide')
+  $('.show-tasks-list').empty()
+  $('.show-tasks-list').addClass('hide')
 }
 
 // Display failure message, then reset form fields.

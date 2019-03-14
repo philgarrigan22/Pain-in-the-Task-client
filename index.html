@@ -50,17 +50,17 @@
 
         <!-- Modal Trigger -->
         <li>
-         <a id="change-password-modal" class="waves-effect waves-light modal-trigger hide" href="#change-password-modal">Change Password</a>
+         <a id="change-password-modal-trigger" class="waves-effect waves-light modal-trigger hide" href="#change-password-modal">Change Password</a>
         </li>
         <li>
           <a id="sign-out-button" class="waves-effect hide">Sign Out</a>
         </li>
 
-        <li><a href="#!"><i class="material-icons">cloud</i>First Link With Icon</a></li>
+        <!-- <li><a href="#!"><i class="material-icons">cloud</i>First Link With Icon</a></li>
         <li><a href="#!">Second Link</a></li>
         <li><div class="divider"></div></li>
         <li><a class="subheader">Subheader</a></li>
-        <li><a class="waves-effect" href="#!">Third Link With Waves</a></li>
+        <li><a class="waves-effect" href="#!">Third Link With Waves</a></li> -->
       </ul>
 
       <!-- Sidenav Modal Structure -->
@@ -143,45 +143,56 @@
         </div>
       </section>
 
+
+      <!-- Modal Trigger -->
+      <!-- <li>
+       <a id="change-password-modal-trigger" class="waves-effect waves-light modal-trigger hide" href="#change-password-modal">Change Password</a>
+      </li> -->
+
       <!-- Create Task Section -->
       <div class="create-task-section hide">
           <h3>Tasks</h3>
 
         <div class="fixed-action-btn direction-top" style="bottom: 45px; right: 24px;">
-          <a class="btn-floating btn-large red waves-effect waves-light red">
+          <a class="btn-floating btn-large red waves-effect modal-trigger" href="#create-task-modal">
             <i class="material-icons">add</i>
           </a>
         </div>
       </div>
 
-        <!-- <div class="col s6 content-section">
-          <form id="create-task-form" class="inner-fields">
-            <div class="form-group">
-              <label for="createTask">Create Task</label>
-              <div class="row">
-                <div class="input-field col s12">
-                  <input name="task[title]" type="text" class="validate">
-                  <label for="createTask">New Task</label>
+      <!-- Create Task Modal Structure -->
+     <div id="create-task-modal" class="modal">
+          <div class="row modal-content">
+            <div class="col s12 content-section">
+              <form id="create-task-form" class="inner-fields">
+                <div class="form-group">
+                  <label for="createTask">Create Task</label>
+                  <div class="row">
+                    <div class="input-field col s12">
+                      <input name="task[title]" type="text" class="validate">
+                      <label for="createTask">New Task</label>
+                    </div>
+                  </div>
+                  <div class="row">
+                    <div class="input-field col s12">
+                    <input name="task[description]" type="text" class="validate">
+                    <label for="description">Description</label>
+                    </div>
+                  </div>
+                  <div class="row">
+                    <div class="input-field col s12">
+                    <input name="task[target_date]" type="text" class="validate">
+                    <label for="targetDate">Date to Complete</label>
+                    </div>
+                  </div>
+                  <div class="modal-footer">
+                    <input type="submit" value="Create" class="modal-close btn btn-secondary waves-effect waves-green">
+                  </div>
                 </div>
-              </div>
-              <div class="row">
-                <div class="input-field col s12">
-                <input name="task[description]" type="text" class="validate">
-                <label for="description">Description</label>
-                </div>
-              </div>
-              <div class="row">
-                <div class="input-field col s12">
-                <input name="task[target_date]" type="text" class="validate">
-                <label for="targetDate">Date to Complete</label>
-                </div>
-              </div>
-              <input type="submit" value="Create" class="s12 btn btn-secondary">
-
+              </form>
             </div>
-          </form>
-        </div> -->
-
+          </div>
+      </div>
 
     <!-- <div class="divider"></div> -->
 
