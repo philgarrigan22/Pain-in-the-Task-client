@@ -30,5 +30,8 @@ $(() => {
 
   // Handlebars data events
   $('#show-tasks-list').on('submit', '.update-task-modal-form', taskEvents.onUpdateTaskModal)
+
+  $('#show-tasks-list').on('click', '.update-task-modal-btn', taskEvents.onShowUpdateTaskModal)
+
   $('#show-tasks-list').on('click', '.delete-task-btn', taskEvents.onDeleteTask)
 })

@@ -67,6 +67,16 @@ const onUpdateTaskModal = event => {
     .catch(ui.updateTaskFailure)
 }
 
+const onShowUpdateTaskModal = event => {
+  console.log('EVENT LISTENER WORKING')
+  console.log(event)
+  console.log(event.target)
+  $('.modal').modal()
+  $('#updateTaskModal').modal('open')
+  // const instance = M.Modal.getInstance('#updateTaskModal-33')
+  // instance.open()
+}
+
 // const onDeleteTask = event => {
 //   event.preventDefault()
 //   console.log('onDeleteTask has started')
@@ -98,5 +108,6 @@ module.exports = {
   onCreateTask,
   onShowTasks,
   onDeleteTask,
-  onUpdateTaskModal
+  onUpdateTaskModal,
+  onShowUpdateTaskModal
 }

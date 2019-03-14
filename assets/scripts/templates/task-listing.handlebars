@@ -24,7 +24,7 @@
     <!-- Delete Button -->
     <button class="delete-task-btn btn btn-danger" data-id="{{task.id}}">Delete!</button>
     <!-- Modal Trigger -->
-    <a class="update-task-modal-btn btn modal-trigger" href="#updateTaskModal-{{task.id}}" data-id="{{task.id}}">Update</a>
+    <a id="update-task-modal-btn-{{task.id}}" class="update-task-modal-btn btn modal-trigger" href="#updateTaskModal-{{task.id}}" data-id="{{task.id}}">Update</a>
     <!-- Modal Structure -->
     <div id="updateTaskModal-{{task.id}}" class="modal">
       <div class="row">
@@ -59,11 +59,19 @@
       </div>
 
       <!-- Modal Trigger -->
+<<<<<<< HEAD
       <script>
       $(document).ready(function(){
         $('.modal').modal();
       });
        </script>
+=======
+      <!-- <script>
+      $(() => {
+        $('.modal').modal()
+      })
+       </script> -->
+>>>>>>> debugging-deploy
   </div>
 
   </section>
