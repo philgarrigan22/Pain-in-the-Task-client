@@ -15,7 +15,7 @@ const signInSuccess = (responseData) => {
   $('.sign-in-box').addClass('hide')
   // Add username in sidenav display and show welcome
   $(`#username`).text(`${store.user.email}`)
-  $(`#user-status`).text('Welcome to Pain in the Task!')
+  $(`#user-status`).text('Welcome!')
 }
 
 // Used for both sign up and sign in failure. display message, then reset form fields.
