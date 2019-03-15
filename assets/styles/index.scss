@@ -28,12 +28,13 @@ body {
 
 .title {
   font-family: 'Source Code Pro', monospace;
-  font-size: 2em;
+  font-size: 2.5em;
 }
 
 .welcome-title {
   font-family: 'Source Code Pro', monospace;
   color: white;
+  text-shadow: 1px 1px 2px red, 0 0 1em cyan, 0 0 0.2em cyan;
 }
 
 .input-field {
@@ -50,6 +51,6 @@ body {
 
 @media (max-width: 540px) {
   .title {
-    font-size: 1rem;
+    font-size: 1.5rem;
   }
 }
