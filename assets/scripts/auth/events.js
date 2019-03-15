@@ -8,10 +8,12 @@ const onSignUp = (event) => {
   event.preventDefault()
   const formData = getFormFields(event.target)
   api.signUp(formData)
+    // Auto sign-up to sign-in.
     .then(() => { onSignUpSignIn(formData) })
     .catch(ui.signUpFailure)
 }
 
+// Allows for user to automatically be signed in on successful sign-up.
 const onSignUpSignIn = (formData) => {
   api.signIn(formData)
     .then(ui.signInSuccess)
@@ -24,6 +26,8 @@ const onSignIn = (event) => {
   api.signIn(formData)
     .then(ui.signInSuccess)
     .catch(ui.signUpFailure)
+    // After successful sign in, directs to show tasks in order to load tasks
+    // upon sign in.
     .then(taskEvents.onShowTasks)
 }
 
@@ -42,11 +46,13 @@ const onSignOut = () => {
     .catch(ui.signOutFailure)
 }
 
+// Toggle between sign-up and sign-in forms
 const onSignInToggle = () => {
   $('.sign-up-box').addClass('hide')
   $('.sign-in-box').removeClass('hide')
 }
 
+// Toggle between sign-up and sign-in forms
 const onSignUpToggle = () => {
   $('.sign-up-box').removeClass('hide')
   $('.sign-in-box').addClass('hide')

@@ -2,10 +2,6 @@ const config = require('../config.js')
 const store = require('../store.js')
 
 const createTask = (formData) => {
-  // console.log('API REQUEST INVOKED')
-  // console.log('FORM DATA IS')
-  // console.log(formData)
-
   return $.ajax({
     url: config.apiUrl + '/tasks',
     method: 'POST',
@@ -17,7 +13,6 @@ const createTask = (formData) => {
 }
 
 const showTasks = () => {
-  // console.log('showTasks')
   return $.ajax({
     url: config.apiUrl + '/tasks',
     method: 'GET',
@@ -29,10 +24,6 @@ const showTasks = () => {
 }
 
 const updateTask = (formData) => {
-  // console.log('API REQUEST INVOKED')
-  // console.log('FORM DATA IS')
-  // console.log(formData)
-
   return $.ajax({
     url: config.apiUrl + '/tasks/' + formData.task.task_id,
     method: 'PATCH',
@@ -44,10 +35,6 @@ const updateTask = (formData) => {
 }
 
 const updateTaskModal = (formData, modalId) => {
-  // console.log('API REQUEST INVOKED')
-  // console.log('FORM DATA IS')
-  // console.log(formData)
-
   return $.ajax({
     url: config.apiUrl + '/tasks/' + modalId,
     method: 'PATCH',
@@ -58,25 +45,7 @@ const updateTaskModal = (formData, modalId) => {
   })
 }
 
-// const deleteTask = (formData) => {
-// console.log('API REQUEST INVOKED')
-// console.log('FORM DATA IS')
-// console.log(formData)
-//
-//   return $.ajax({
-//     url: config.apiUrl + '/tasks/' + formData.task.task_id,
-//     method: 'DELETE',
-//     headers: {
-//       Authorization: 'Token token=' + store.user.token
-//     }
-//   })
-// }
-
 const deleteTask = (taskId) => {
-  // console.log('API REQUEST INVOKED')
-  // console.log('taskId')
-  // console.log(taskId)
-
   return $.ajax({
     url: config.apiUrl + '/tasks/' + taskId,
     method: 'DELETE',
