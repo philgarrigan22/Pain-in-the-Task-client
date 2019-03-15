@@ -19,9 +19,6 @@ body {
   background-color: white;
 }
 
-.hidden {
-  display: none;
-}
 
 .nav-bar-style {
   margin-bottom: .5em;
@@ -43,4 +40,14 @@ body {
 
 .small-message {
   color: white;
+}
+
+.hidden {
+  display: none;
+}
+
+@media (max-width: 540px) {
+  .title {
+    font-size: 1rem;
+  }
 }
