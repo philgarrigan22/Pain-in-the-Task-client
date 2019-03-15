@@ -9,7 +9,6 @@ const taskEvents = require('./task/events.js')
 $(() => {
   $('.sidenav').sidenav() // materialize scss sidenav action.
   $('.modal').modal() // materialize scss modal action.
-  $('.tap-target').tapTarget()
 
   // Authorization events.
   $('#sign-up-form').on('submit', authEvents.onSignUp)
