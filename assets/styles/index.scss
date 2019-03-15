@@ -1,12 +1,22 @@
-@import 'normalize';
+// @import 'normalize';
 
 body {
   text-align: center;
-  // background-image: url('./images/do-something-great.png');
+  font-family: 'Source Code Pro', monospace;
+
+  background-image: url('public/should-wang-1401880-unsplash.jpg');
+  background-position: center;
+  // background-repeat: no-repeat;
+  background-size: cover;
+  height: 100vh;
 }
 
 .bottom-message {
   padding: .5rem;
+}
+
+.collapsible-body {
+  background-color: white;
 }
 
 .hidden {
@@ -17,6 +27,20 @@ body {
   margin-bottom: .5em;
 }
 
-.title-header {
-  margin: 0 auto !important;
+.title {
+  font-family: 'Source Code Pro', monospace;
+  font-size: 2em;
+}
+
+.welcome-title {
+  font-family: 'Source Code Pro', monospace;
+  color: white;
+}
+
+.input-field {
+     color: white;
+  }
+
+.small-message {
+  color: white;
 }
