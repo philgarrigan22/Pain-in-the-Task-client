@@ -2,16 +2,21 @@
 
 body {
   text-align: center;
+  // background-image: url('./images/do-something-great.png');
 }
 
 .bottom-message {
   padding: .5rem;
 }
 
+.hidden {
+  display: none;
+}
+
 .nav-bar-style {
   margin-bottom: .5em;
 }
 
-.hidden {
-  display: none;
+.title-header {
+  margin: 0 auto !important;
 }

@@ -4,9 +4,9 @@
     <ul class="collapsible">
         <li class="taskDropdown" data-id="{{task.id}}">
 
-          <div id="taskDropdown-{{task.id}}" class="collapsible-header"><i class="material-icons right">expand_more</i>{{limit task.title 25}}</div>
+          <div id="taskDropdown-{{task.id}}" class="collapsible-header"><i class="material-icons right">expand_more</i>{{limit task.title 50}}</div>
           <div class="collapsible-body"><span>
-            <p>
+            <p class="flow-text">
               <small>Description:</small>
               {{#if task.description}}
                 {{task.description}}
@@ -14,7 +14,7 @@
 
               {{/if}}
             </p>
-            <p>
+            <p class="flow-text">
               <small>Due Date:</small>
               {{#if task.target_date}}
                 {{task.target_date}}
