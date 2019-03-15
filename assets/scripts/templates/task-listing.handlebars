@@ -39,20 +39,17 @@
               <label for="updateTask">Update Task</label>
               <div class="row">
                 <div class="input-field col s12">
-                  <input name="task[title]" type="text" class="validate">
-                  <label for="updateTask">Update Task Title</label>
+                  <input name="task[title]" type="text" class="validate" value="{{task.title}}">
                 </div>
               </div>
               <div class="row">
                 <div class="input-field col s12">
-                <input name="task[description]" type="text" class="validate">
-                <label for="description">Update Description</label>
+                <input name="task[description]" type="text" class="validate" value="{{task.description}}">
                 </div>
               </div>
               <div class="row">
                 <div class="input-field col s12">
-                <input name="task[target_date]" type="text" class="validate">
-                <label for="targetDate">Update Date</label>
+                <input name="task[target_date]" type="text" class="validate" value="{{task.target_date}}">
                 </div>
               </div>
               <div class="modal-footer">
