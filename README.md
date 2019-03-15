@@ -4,7 +4,7 @@ Let's be honest, nobody actually enjoys doing 90% of the things that go onto a t
 
 ## Visit the site
 
-Visit the website at https://philgarrigan22.github.io/pjg-tic-tac-toe-client/.
+Visit the website at https://philgarrigan22.github.io/Pain-in-the-Task-client/.
 
 ## Other Links:
 + Server-side repo: https://github.com/philgarrigan22/Pain-in-the-Task-API
@@ -56,4 +56,4 @@ I tried to follow the steps below, as best as possible, while creating my applic
 ## Unsolved Problems / Future Plan
 
 + I would like to add another resource to my API. This resource would be Lists, in which the user would be able to organize their tasks into specific lists.
-+ I would like to add a feature where the user can mark tasks as complete. This would take the tasks off of the visible listing of open tasks, but would store them elsewhere, in case the user would like to access them in the future. 
++ I would like to add a feature where the user can mark tasks as complete. This would take the tasks off of the visible listing of open tasks, but would store them elsewhere, in case the user would like to access them in the future.
