@@ -23,9 +23,9 @@
               {{/if}}
             </p>
             <!-- Delete Button -->
-            <button class="delete-task-btn btn btn-danger" data-id="{{task.id}}">Delete!</button>
+            <button type="submit" class="delete-task-btn btn red btn-danger" data-id="{{task.id}}">Delete!</button>
             <!-- Modal Trigger -->
-            <a id="update-task-modal-btn-{{task.id}}" class="update-task-modal-btn btn modal-trigger" href="#updateTaskModal-{{task.id}}" data-id="{{task.id}}">Update</a>
+            <a id="update-task-modal-btn-{{task.id}}" class="update-task-modal-btn btn green modal-trigger" href="#updateTaskModal-{{task.id}}" data-id="{{task.id}}">Update</a>
           </span></div>
         </li>
       </ul>
