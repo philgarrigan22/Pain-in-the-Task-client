@@ -26,6 +26,9 @@ const onShowTasks = () => {
   // if (event !== undefined || event.type !== undefined) { event.preventDefault() }
   api.showTasks()
     .then(ui.showTasksSuccess)
+    .then(() => {
+      $('.taskDropdown').trigger('click')
+    })
     .catch(ui.showTasksFailure)
 }
 
@@ -75,6 +78,13 @@ const onShowUpdateTaskModal = event => {
   $('#updateTaskModal').modal('open')
 }
 
+const onShowTaskDropdown = event => {
+  console.log('EVENT LISTENER WORKING')
+  console.log(event)
+  console.log(event.target)
+  $('.collapsible').collapsible()
+}
+
 // const onDeleteTask = event => {
 //   event.preventDefault()
 // console.log('onDeleteTask has started')
@@ -107,5 +117,6 @@ module.exports = {
   onShowTasks,
   onDeleteTask,
   onUpdateTaskModal,
-  onShowUpdateTaskModal
+  onShowUpdateTaskModal,
+  onShowTaskDropdown
 }

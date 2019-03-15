@@ -30,8 +30,12 @@ $(() => {
 
   // Handlebars data events
   $('#show-tasks-list').on('submit', '.update-task-modal-form', taskEvents.onUpdateTaskModal)
-
   $('#show-tasks-list').on('click', '.update-task-modal-btn', taskEvents.onShowUpdateTaskModal)
-
   $('#show-tasks-list').on('click', '.delete-task-btn', taskEvents.onDeleteTask)
+  // $('body').on('click', '#show-tasks-list', () => {
+  //   taskEvents.onShowTaskDropdown()
+  // })
+  $('#show-tasks-list').on('click', '.taskDropdown', () => {
+    $('.collapsible').collapsible()
+  })
 })

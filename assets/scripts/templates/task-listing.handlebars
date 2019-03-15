@@ -2,29 +2,35 @@
   <!-- Don't uncomment yet -->
 
   <section class="task">
-    <h2 data-id="{{task.id}}">
-      <small>Title:</small> {{limit task.title 25}}
-    </h2>
-    <p>
-      <small>Description:</small>
-      {{#if task.description}}
-        {{task.description}}
-      {{else}}
+    <ul class="collapsible">
+        <li class="taskDropdown" data-id="{{task.id}}">
 
-      {{/if}}
-    </p>
-    <p>
-      <small>Due Date:</small>
-      {{#if task.target_date}}
-        {{task.target_date}}
-      {{else}}
+          <div id="taskDropdown-{{task.id}}" class="collapsible-header">{{limit task.title 25}}</div>
+          <div class="collapsible-body"><span>
+            <p>
+              <small>Description:</small>
+              {{#if task.description}}
+                {{task.description}}
+              {{else}}
 
-      {{/if}}
-    </p>
-    <!-- Delete Button -->
-    <button class="delete-task-btn btn btn-danger" data-id="{{task.id}}">Delete!</button>
-    <!-- Modal Trigger -->
-    <a id="update-task-modal-btn-{{task.id}}" class="update-task-modal-btn btn modal-trigger" href="#updateTaskModal-{{task.id}}" data-id="{{task.id}}">Update</a>
+              {{/if}}
+            </p>
+            <p>
+              <small>Due Date:</small>
+              {{#if task.target_date}}
+                {{task.target_date}}
+              {{else}}
+
+              {{/if}}
+            </p>
+            <!-- Delete Button -->
+            <button class="delete-task-btn btn btn-danger" data-id="{{task.id}}">Delete!</button>
+            <!-- Modal Trigger -->
+            <a id="update-task-modal-btn-{{task.id}}" class="update-task-modal-btn btn modal-trigger" href="#updateTaskModal-{{task.id}}" data-id="{{task.id}}">Update</a>
+          </span></div>
+        </li>
+      </ul>
+
     <!-- Modal Structure -->
     <div id="updateTaskModal-{{task.id}}" class="modal">
       <div class="row">
