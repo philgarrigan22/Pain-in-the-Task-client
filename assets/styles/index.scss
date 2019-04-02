@@ -18,7 +18,11 @@ body {
 
 .collapsible-body {
   background-color: white;
-  overflow: auto;
+  overflow-x: auto;
+}
+
+.collapsible-header {
+  overflow-x: hidden;
 }
 
 
